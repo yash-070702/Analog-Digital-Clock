@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog-Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/analog-clocl-bg.png" type="image/x-icon">
+</head>
+<body>
+  <div class="loader"><img src="./images/loading-gif.gif" alt="">
+  <h3>Loading...</h3></div>
+   <div class="heading">Analog-Digital Clock</div>
+
+    <div class="container">
+      <div class="clock">
+        <div style="--clr: #ffffff; --h: 60px" id="hour" class="hand main-hand">
+          <i id="houri" class="main-hand"></i>
+        </div>
+        <div style="--h: 75px" id="min" class="hand ">
+          <i id="mini" class="main-hand"></i>
+        </div>
+        <div style="--h: 70px" id="sec" class="hand">
+          <i id="seci"></i>
+        </div>
+
+        <span style="--i: 1"><b  class="digits">1</b></span>
+        <span style="--i: 2"><b  class="digits">2</b></span>
+        <span style="--i: 3"><b class="digits">3</b></span>
+        <span style="--i: 4"><b class="digits">4</b></span>
+        <span style="--i: 5"><b class="digits">5</b></span>
+        <span style="--i: 6"><b class="digits">6</b></span>
+        <span style="--i: 7"><b class="digits">7</b></span>
+        <span style="--i: 8"><b class="digits">8</b></span>
+        <span style="--i: 9"><b class="digits">9</b></span>
+        <span style="--i: 10"><b class="digits">10</b></span>
+        <span style="--i: 11"><b class="digits">11</b></span>
+        <span style="--i: 12"><b class="digits">12</b></span>
+      </div>
+    </div>
+   
+    <center>
+        <div class="text-clock">
+
+            <div class="clock__text">
+      <span class="clock_text" id="text-hour"></span>
+      <span class="clock_text">:</span>
+      <span class="clock_text" id="text-minutes"></span>
+      <span class="clock_text">:</span>
+      <span class="clock_text" id="text-seconds"></span>
+      <span class="clock_text_ampm" id="text-ampm"></spam>
+  </div>
+
+  <div class="clock__date">
+    
+      <span class="date_text" id="date-day"></span>
+      <span class="date_text" id="date-month"></span>
+      <span class="date_text" id="date-year"></span>
+  </div>
+  </div>
+    </center> 
+    <input type="checkbox" class="checkbox">   
+ <footer class="footer">
+        <p class="footer-text">&copy; 2024 Yash Aggarwal . All Rights Reserved.</p>
+    </footer> 
+    <script src="script.js"></script>
+  </body>
+</html>
