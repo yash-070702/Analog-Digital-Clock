@@ -45,7 +45,7 @@ function displaytime(){
     text_sec.innerHTML=(ss>9) ? ss :`0${ss}`;
     text_hr.innerHTML=(hh>9) ? hh :`0${hh}`;
     text_min.innerHTML=(mm>9) ? mm :`0${mm}`;
-    date_month.innerHTML=`${month[date.getMonth()-1]} ,`;
+    date_month.innerHTML=`${month[date.getMonth()]} ,`;
     date_day.innerHTML=(date.getDate()>9) ? date.getDate() : `0${date.getDate()}`;
     date_year.innerHTML=date.getFullYear();
     
