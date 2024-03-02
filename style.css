@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+    color:azure;
+}
+:root {
+    --hue-color: 240;
+}  
+
+.heading{
+    font-size: 3rem;
+    position: absolute;
+    top:3%;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #25252d;
+    gap:30px;
+    position: relative;
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #25252d;
+
+    border: 2px solid #2e2d35;
+    box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1), 
+    -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), 
+    inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), 
+    inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+    inset: 12px;
+    text-align: center;
+}
+
+ .digits{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.clock_text{
+    font-size: 2rem;
+    color:#f1f1f5;
+    font-weight: 600;
+    
+}
+.clock__text{
+    position: relative;
+    padding-inline: 10px;
+  
+
+}
+.text-clock{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+}
+
+.clock_text_ampm{
+    position: absolute;
+    right:-15%
+
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+} 
+.main-hand{
+    background-color: #ffffff;
+}
+#seci{
+    background-color: #34338a;
+}
+
+.checkbox{
+    height:25px;
+    width: 50px;
+    background: #222;
+    appearance: none;
+    border-radius: 16px;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                inset 0 8px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.1);
+    position: absolute;
+    outline: none;
+    top:83%;
+    cursor: pointer;
+    transition: 0.5s;            
+}
+
+.checkbox::before{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to bottom,#444,#222);
+    border-radius: 25px;
+    transform: scale(0.9);
+    transition: 0.5s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5),
+                inset 4px 4px rgba(255,255,255,0.2),
+                inset -4px 4px rgba(255,255,255,0.2);
+}
+
+.checkbox:checked{
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.58),
+                inset 0 2px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(133, 47, 47, 0.05);
+}
+
+.checkbox:checked::before{
+    left: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1),
+                inset 4px 4px rgba(255,255,255,1),
+                inset -4px 4px rgba(255,255,255,1);
+    background: linear-gradient(to bottom,#eaeaea,#f9f9f9);            
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+ position: absolute;
+ width: 100vw;
+ bottom: 0%;
+    background-color: rgba(81, 78, 78, 0.525);
+}
+
+.footer-text{
+   
+    font-size: 20px;
+    color: #ffffff;
+}
+.loader{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #25252d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    flex-direction: column;
+}
+.loader img{
+width:100px;
+height:100px;
+}
+
+
+@media(max-width:500px){
+    .heading{
+        font-size: 2rem;
+    }
+}
+@media(max-width:350px){
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+
+
